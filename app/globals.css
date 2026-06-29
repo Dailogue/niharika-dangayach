@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-cream: #fbf8f0;
+  --color-cream-pink: #fff6f6;
+  --color-brown: #50352a;
+  --color-blush: #ecb4a3;
+  --color-peach: #f1d6c5;
+  --color-pink: #f3d7e7;
+
+  /* Fonts (wired to next/font CSS variables in layout.tsx) */
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-script: var(--font-parisienne), cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 150s linear infinite;
+}
+
+/* Utility: uppercase letter-spaced labels used across buttons/eyebrows */
+.tracking-label {
+  letter-spacing: 0.18em;
+}
